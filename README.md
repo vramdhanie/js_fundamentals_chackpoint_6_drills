@@ -26,4 +26,19 @@ function circleArea(r) {
 }
 ```
 
+## 3
+**Learning:** arithmetic expressions, modulus, numeric types are not integers, string construction using template literals
 
+**Question:** Write a function named `integerDivision` that accepts two numbers named `a` and `b` and calculates the integer value `a/b` and the remainder after division. Then return a string in the format `"a / b is quotient with remainder r"`. 
+
+*Hint: which method of the Math object will give you just the integer part of a number?* 
+
+**Solution:**
+
+```
+function integerDivision(a, b) {
+  let quotient = Math.trunc(a / b);
+  let remainder = a % b;
+  return `${a} / ${b} is ${quotient} with remainder ${remainder}`;
+}
+```
