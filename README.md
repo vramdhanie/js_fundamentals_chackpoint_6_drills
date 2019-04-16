@@ -87,3 +87,17 @@ function canFit(a, b, r) {
   return hyp <= r;
 }
 ```
+
+## 7
+
+**Learning:** modulus, returning booleans
+
+**Question:** Write a function named `isOdd` that accepts a single value `n`. Return true is `n` is an odd number, false otherwise.
+
+**Solution:**
+
+```
+function isOdd(n) {
+  return n % 2 == 1;
+}
+```
