@@ -73,3 +73,17 @@ function hypotenuse(a, b) {
   return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 }
 ```
+
+## 6
+**Learning:** conditional operators, boolean types, returning booleans, evaluating boolean expressions
+
+**Question:** Write a function named `canFit` that accepts three parameters `a`, `b`, and `r` where `a` and `d` are the lengths of two sides of a right angled triangle and `r` is the radius of a circle. A triangle can fit inside of a circle if the hypotenuse of the triangle is less than or equal to the radius of the circle. Return true if the triangle with sides `a` and `b` can fit inside the circle with radius `r`, false otherwise.
+
+**Solution:**
+
+```
+function canFit(a, b, r) {
+  const hyp = hypotenuse(a, b);
+  return hyp <= r;
+}
+```
