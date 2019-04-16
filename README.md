@@ -42,3 +42,20 @@ function integerDivision(a, b) {
   return `${a} / ${b} is ${quotient} with remainder ${remainder}`;
 }
 ```
+
+## 4
+**Learning:** simple conditional, basic validation
+
+**Question:** Revisit the integer division question from above. In that question we did not consider what happens if the function was called with the parameter b = 0. Since division by zero is not defined it would not be possible to perform that operation. Write a new function that provides the same functionality as `integerDivision` but if `b = 0` returns `'Sorry, cannot divide by zero'` instead.
+
+**Solution:**
+
+```
+function integerDivision2(a, b) {
+  if(b == 0) {
+    return 'Sorry, cannot divide by zero';
+  } else {
+    return integerDivision(a, b);
+  }
+}
+```
