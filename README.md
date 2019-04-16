@@ -101,3 +101,25 @@ function isOdd(n) {
   return n % 2 == 1;
 }
 ```
+
+## 8
+**Learning:** random number generator, random range, invoking functions, predicate functions, basic conditional, modulus
+
+**Question:** Write a function named `pinGenerator` that generates a random 5 digit PIN. The PIN must be an even number. 
+
+*Hints: How would you generate a 5 digit random integer? How can you check if the number is odd? If it is odd, what can you do to make it even?*
+
+**Solution:**
+
+```
+
+function pinGenerator() {
+  const min = 10000;
+  const max = 99999;
+  const ran = Math.round(Math.random() * (max - min) + min);
+  if (isOdd(ran)) {
+    ran = ran + 1;
+  }
+  return ran;
+}
+```
