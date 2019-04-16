@@ -59,3 +59,17 @@ function integerDivision2(a, b) {
   }
 }
 ```
+
+## 5
+
+**Learning:** Math object, arithmetic expressions
+
+**Question:** Write a function named `hypotenuse` that takes two numbers `a` and `b` that represents the two sides of a right angled triangle. Return the length of the hypotenuse, named c, of the triangle using the formula: `a^2 + b^2 = c^2`.
+
+**Solution:**
+
+```
+function hypotenuse(a, b) {
+  return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+}
+```
