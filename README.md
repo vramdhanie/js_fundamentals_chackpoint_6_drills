@@ -123,3 +123,22 @@ function pinGenerator() {
   return ran;
 }
 ```
+
+## 9
+**Learning:** Sequential steps, mutating variables, modulus, constructing strings with template literals
+
+**Question:** Write a function named `coinChange` that accepts a single parameter `n` representing an amount of money between 0 and 100 inclusive. Calculate the number of coins necessary to make up that amount of money. For instance to make $0.12 you need a ten cent piece and 2 one cent pieces. Return a string in the format: `'0 25 cent pieces, 1 ten cent pieces, 0 five cent pieces and 2 one cent pieces'`
+
+**Solution:**
+
+```
+function coinChange(n) {
+  const quarters = Math.trunc(n / 25);
+  n = n % 25;
+  const dimes = Math.trunc(n / 10);
+  n = n % 10;
+  const nickels = Math.trunc(n / 5);
+  const cents = n % 5;
+  return `${quarters} 25 cent pieces, ${dimes} ten cent pieces, ${nickels} five cent pieces and ${cents} one cent pieces`;
+}
+```
