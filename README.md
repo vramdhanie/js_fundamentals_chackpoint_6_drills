@@ -142,3 +142,40 @@ function coinChange(n) {
   return `${quarters} 25 cent pieces, ${dimes} ten cent pieces, ${nickels} five cent pieces and ${cents} one cent pieces`;
 }
 ```
+
+## 10
+
+**Learning:** basic conditional, accessing property of object, boolean evaluation
+
+**Question:** Write a function that accepts a user object that either represents a user that is logged in or not. If the user is logged in then the object looks like this:
+
+```
+{
+  id: 3224,
+  logged_in: true,
+  firstname: 'Samwise',
+  lastname: 'Gamgee'
+}
+```
+
+And if the user is not logged in the object looks like this:
+
+```
+{
+  id: 3224,
+  logged_in: false
+}
+```
+
+If the user is logged in, display a greeting by name. `"Hello Samwise Gamgee"`. Otherwise display the gtreeting: `"Welcome, please log in"`.
+
+**Solution:**
+```
+function greet(user) {
+  if(user.logged_in) {
+    return `Hello ${user.firstname} ${user.lastname}`;
+  } else {
+    return `Welcome, please log in`;
+  }
+}
+```
