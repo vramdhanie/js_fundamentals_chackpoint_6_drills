@@ -246,4 +246,38 @@ function creditLimit(user) {
 
 ```
 
+ ## 13
  
+ **Learning:** Multiple conditions using and and or ( or nested if statements )
+ 
+ **Question:** A palindrome is a number or text phrase that reads the same backwards and forwards. For example, this 5 digit number is a palindrome: 12321. Write a function that accepts a five digit number as a parameter. If the number is not five digit long return the message: 'Incorrect input'. If it is a five digit number, determine if it is a palindrome or not. If it is a palindrome return 'Yes, it is a palindrome', otherwise return 'No, not a palindrome'.
+ 
+ **Solution:**
+
+```
+function palindrome(n) {
+  if(n > 99999 || n < 10000) {
+    return 'Incorrect input';
+  }
+
+  const first_digit = Math.trunc(n / 10000);
+  const last_digit = n % 10;
+  const first_and_last = first_digit === last_digit;
+
+  n = n % 10000;
+  n = Math.trunc(n / 10);
+
+  const second_digit = Math.trunc(n / 100);
+  const second_to_last_digit = n % 10;
+  const second_digits = second_digit === second_to_last_digit;
+
+  if(first_and_last && second_digits) {
+    return 'Yes, it is a palindrome';
+  } else {
+    return 'No, not a palindrome';
+  }
+
+
+```
+
+
