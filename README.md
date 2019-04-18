@@ -280,4 +280,32 @@ function palindrome(n) {
 
 ```
 
+## 14
 
+**Learning:** dangling else, value of indentation, block
+
+**Question:** Consider the two snippets of code below labelled a and b. For each snippet try to predict the output if that code is executed. To make this more challenging, the snippets are not indented the way you were taught to properly indent your code. After you predict what you think this will output, try running the snippets in your browser's console and see if it does what you expect. If it does not correspond to your prediction try to determine why. *Hint: try indenting the code properly to see if that makes it easier to interpret*.
+
+```
+// a.
+let x = 5;
+let y = 11;
+if(x < 10)
+if(y > 10)
+console.log('Yes');
+else
+console.log('No');
+console.log('Maybe');
+
+// b.
+let x = 5;
+let y = 11;
+if(x < 10){
+if(y > 10)
+console.log('Yes');
+}
+else {
+console.log('No');
+console.log('Maybe');
+}
+```
