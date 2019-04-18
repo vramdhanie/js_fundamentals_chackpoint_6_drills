@@ -180,7 +180,7 @@ function greet(user) {
 }
 ```
 
-# 11
+## 11
  **Learning:** Multiple independent conditionals in sequence, boundary values
  
  **Question:** An electric company charges customers a flat rate of $6.00 for administrative costs and a unit charge for the amount of electricity used according to the following schedule:
@@ -212,5 +212,38 @@ Write a function that accepts the amount of electricity used by a customer and c
 }
 ```
 
+## 12
+**Learning:** Accessing properties of objects, basic arithmetic, 
+
+**Question:** Write a function that accepts an object containing user information for a credit card company and determines if the user has exceeded her credit limit for the month. The user object contains the following properties:
+
+```
+  {
+    account_number: 12345,
+    name: 'Brie Larson',
+    balance_beginning_of_month: 300,
+    total_charges_in_month: 700,
+    total_credits_in_month: 200,
+    credit_limit: 500
+  }
+```
+
+The new balance at the end of the month is given by *balance_beginning_of_month + total_charges_in_month - total_credits_in_month*. If the credit limit has been exceeded return the string 'Credit limit exceeded', otherwise return 'Credit available'.
+
+
+
+**Solution:**
+
+```
+function creditLimit(user) {
+  const new_balance = user.balance_beginning_of_month + user.total_charges_in_month - user.total_credits_in_month;
+  if(new_balance > user.credit_limit) {
+    return 'Credit limit exceeded';
+  } else {
+    return 'Credit available';
+  }
+}
+
+```
 
  
