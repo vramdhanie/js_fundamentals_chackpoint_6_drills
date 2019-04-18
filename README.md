@@ -179,3 +179,38 @@ function greet(user) {
   }
 }
 ```
+
+# 11
+ **Learning:** Multiple independent conditionals in sequence, boundary values
+ 
+ **Question:** An electric company charges customers a flat rate of $6.00 for administrative costs and a unit charge for the amount of electricity used according to the following schedule:
+ 
+     First 400 kWh @ $0.26
+     Next 600 kWh  @ $0.32
+     Over 1000kWh  @ $0.37
+
+Write a function that accepts the amount of electricity used by a customer and calculates the total bill.
+ 
+ **Solution:**
+ ```
+ function electricBill(kwh) {
+  let total = 6;
+  if(kwh > 1000) {
+    total = total + ((kwh - 1000)* 0.37);
+    kwh = 1000;
+  } 
+
+  if(kwh > 400) {
+    total = total + ((kwh - 400) * 0.32);
+    kwh = 400;
+  } 
+
+  total = total + (kwh * 0.26);
+  
+  return total;
+
+}
+```
+
+
+ 
